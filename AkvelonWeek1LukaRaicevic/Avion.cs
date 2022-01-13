@@ -8,14 +8,21 @@ namespace AkvelonWeek1LukaRaicevic
 {
     class Avion : Vozilo
     {
+        #region atributi
         private int visinaLetenja;
         private int domet;
+        #endregion
 
+        #region Konstruktori
         public Avion(int visinaLetenja, int domet, string boja, float brzina, float maxBrzina): base(boja, brzina, maxBrzina)
         {
             this.visinaLetenja = visinaLetenja;
             this.domet = domet;
         }
+
+        #endregion
+
+        #region funkcije
 
         public override void ubrzaj()
         {
@@ -44,8 +51,8 @@ namespace AkvelonWeek1LukaRaicevic
         }
         public override string ToString()
         {
-            return $"Visina letenja aviona: {visinaLetenja}\n "
+            return $"AVION\nVisina letenja aviona: {visinaLetenja}\nDomet letenja aviona: {domet}\n{base.ToString()}";
         }
-
+        #endregion
     }
 }

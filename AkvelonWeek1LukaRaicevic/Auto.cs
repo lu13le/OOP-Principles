@@ -8,14 +8,21 @@ namespace AkvelonWeek1LukaRaicevic
 {
     class Auto : Vozilo
     {
+        #region atributi
         private string marka;
         private int brojSedista;
+        #endregion
 
+        #region konstruktori
         public Auto(string marka, int brojSedista,string boja,float brzina, float maxBrzina):base(boja,brzina,maxBrzina)
         {
             this.marka = marka;
             this.brojSedista = brojSedista;
         }
+
+        #endregion
+
+        #region Funkcije
 
         public override void ubrzaj()
         {
@@ -49,7 +56,8 @@ namespace AkvelonWeek1LukaRaicevic
 
         public override string ToString()
         {
-            return $"Marka auta: {marka}\nBroj sedista auta:{brojSedista}\n{base.ToString()}";
+            return $"AUTO\nMarka auta: {marka}\nBroj sedista auta:{brojSedista}\n{base.ToString()}\n";
         }
+        #endregion
     }
 }
